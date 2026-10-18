@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capl-trwalosc-edu"
+version = "1.0.0"
+description = "CAPL: repeated measures, class clustering and educational outcomes"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "pandas>=2.1,<3", "scipy>=1.12,<2", "matplotlib>=3.8,<4"]
+
+[project.scripts]
+capl-analysis = "capl_analysis.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
