@@ -37,4 +37,41 @@ class StatisticsTests(unittest.TestCase):
         d,_=load(ROOT/'examples/capl_synthetic_long.csv');d=d[d.time==3].dropna(subset=['AR','EDU_Matematyka_wynik']).copy();sup.B=100;sup.rng=np.random.default_rng(42);a=assoc(d,'AR','EDU_Matematyka_wynik')
         shifts=d.class_id.astype('category').cat.codes*5.;d.AR+=shifts;d.EDU_Matematyka_wynik-=shifts;sup.rng=np.random.default_rng(42);b=assoc(d,'AR','EDU_Matematyka_wynik')
         self.assertAlmostEqual(a['r_within'],b['r_within'],12)
+class ConversionTests(unittest.TestCase):
+    def source(self):
+        from capl_analysis.data import VARIABLES,TESTS
+        row={'ID':'O1A_4A_GE_001','Gender':1,'Grupa_2026':'GE'}
+        row.update({(f'PLANK_time_{t}' if v=='Plank_time' and t<3 else f'{v}_{t}'):np.nan for v in VARIABLES for t in (1,2,3)})
+        row.update({t:np.nan for t in TESTS})
+        return row
+    def test_duplicate_requires_explicit_option(self):
+        from capl_analysis.convert_wide import convert
+        a=self.source()
+        with self.assertRaisesRegex(ValueError,'Duplicate stable IDs'):convert(pd.DataFrame([a,a]))
+    def test_complementary_duplicates_merge_once_and_preserve_zero(self):
+        from capl_analysis.convert_wide import convert
+        a=self.source();b=a.copy();a['PC_1']=0.;a['PC_2']=-999.;b['PC_2']=12.
+        z,n=convert(pd.DataFrame([a,b]),merge_duplicates=True)
+        self.assertEqual(len(z),3);self.assertEqual(n,0)
+        self.assertEqual(z.loc[z.time==1,'PC'].iloc[0],0.)
+        self.assertEqual(z.loc[z.time==2,'PC'].iloc[0],12.)
+        self.assertEqual(z.attrs['conversion_audit']['duplicate_rows_collapsed'],1)
+    def test_conflicting_score_or_sex_never_merged(self):
+        from capl_analysis.convert_wide import convert
+        for field,values in [('PC_1',[10.,11.]),('Gender',[1,2])]:
+            with self.subTest(field=field):
+                a=self.source();b=a.copy();a[field],b[field]=values
+                with self.assertRaisesRegex(ValueError,'Conflicting duplicate'):convert(pd.DataFrame([a,b]),merge_duplicates=True)
+    def test_invalid_ids_are_counted_without_guessing(self):
+        from capl_analysis.convert_wide import convert
+        a=self.source();b=a.copy();b['ID']='TMP_1';c=a.copy();c['ID']=None
+        z,n=convert(pd.DataFrame([a,b,c]));audit=z.attrs['conversion_audit']
+        self.assertEqual(n,2);self.assertEqual(audit['source_rows'],3)
+        self.assertEqual(audit['missing_id_rows'],1);self.assertEqual(audit['nonstandard_id_rows'],1)
+    def test_source_group_disagreement_stops_conversion(self):
+        from capl_analysis.convert_wide import convert
+        a=self.source();a['Grupa_2026']='GK'
+        with self.assertRaisesRegex(ValueError,'Source group disagrees'):convert(pd.DataFrame([a]))
+
 if __name__=='__main__':unittest.main()
+

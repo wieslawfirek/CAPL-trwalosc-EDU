@@ -14,7 +14,7 @@ Dla każdej zmiennej model zawiera sześć średnich grupa × termin (GE/GK × p
 
 Macierze parametryzuje się rozkładem Cholesky'ego. Optymalizację L-BFGS-B wykonuje się z dwóch punktów startowych. Kontroluje się zbieżność, zgodność minimum oraz równania GLS. MMRM z niepełnymi seriami opiera się na założeniu MAR; nie można dowieść go z dostępnych wyników. Błędy standardowe CR2 i stopnie swobody Satterthwaite'a uwzględniają zależność w klasach; nie usuwają wszystkich możliwych źródeł zakłócenia.
 
-Kontrasty: `immediate` = różnica zmian GE–GK pre→post; `lasting` = różnica zmian pre→rok; `erosion` = różnica zmian post→rok. Nazwa `erosion` jest etykietą techniczną i nie przesądza o spadku. Dodatkowe kontrasty to GE pre→post, GE pre→rok oraz GE i GK post→rok. Każdy z siedmiu typów tworzy osobną rodzinę dziewięciu testów Holma. Przedziały 95% są punktowe. Standaryzowana zmiana wykorzystuje łączone SD wyjściowe; nie jest klasycznym d dla sparowanych prób.
+Kontrasty: `immediate` = różnica zmian GE–GK pre→post; `lasting` = różnica zmian pre→rok; `erosion` = różnica zmian post→rok. Nazwa `erosion` jest etykietą techniczną i nie przesądza o spadku. Dodatkowe kontrasty objęte korektą to GE pre→post, GE pre→rok oraz GE i GK post→rok. Każdy z siedmiu typów tworzy osobną rodzinę dziewięciu testów Holma. Przedziały 95% są punktowe. Standaryzowana zmiana wykorzystuje łączone SD wyjściowe; nie jest klasycznym d dla sparowanych prób.
 
 Diagnostyka: reszty po wybieleniu, wykresy Q–Q, Shapiro–Wilk, Levene według terminu, wyniki skrajne oraz stabilność po opuszczeniu klasy przy ustalonej kowariancji. Nominalne testy rozkładu/wariancji są pomocnicze: nie uwzględniają całej zależności danych. Nie są automatyczną bramką „parametryczny albo nieparametryczny”.
 
@@ -39,3 +39,9 @@ ICC oblicza się z jednoczynnikowej ANOVA przy nierównych liczebnościach, z ko
 ## Interpretacja
 
 Brak istotnej różnicy nie dowodzi równości ani pełnej trwałości. Kod nie ustala po fakcie dopuszczalnej straty i nie wykonuje testów równoważności. ICC nie jest udziałem wyników „spowodowanym przez nauczyciela”. Dodatnia korelacja nie dowodzi, że poprawa CAPL spowoduje poprawę EDU. Wyniki punktowe nie są automatycznie normami wieku/płci. Główne analizy różnią się liczebnościami od uzupełniających, co jest ujawnione w wyjściu.
+
+## Przygotowanie poprawionej bazy i dodatkowe porównanie kroków
+
+W konwerterze pełne ID ma postać `O[1-5][A-Z]_cyfra-litera_GE/GK/GN_trzy-cyfry`. Niepełne i tymczasowe kody są pomijane i liczone osobno od pustych ID. Przed modelowaniem trzeba sprawdzić audyt; pominięcie kodu nie oznacza, że osoba nie miała żadnych wyników. Połączenie kopii ID wymaga jawnej opcji `--merge-duplicates`. Łączenie uzupełnia tylko brakujące wartości; sprzeczne wyniki lub płeć zatrzymują procedurę. Nie uśredniamy sprzecznych wpisów i nie tworzymy połączeń z podobnych wyników. Dla kontroli duplikatów brane są pod uwagę wyłącznie zmienne analizowane, wyniki EDU i płeć; pozostałe narzędzia w źródłowym arkuszu nie należą do zakresu konwersji.
+
+Eksploracyjne porównanie liczby kroków po roku z pretestem w GK pochodzi z tego samego modelu MMRM i tej samej macierzy CR2 co pozostałe kontrasty. Jest przechowywane w `exploratory_contrasts.GK_pre_year`. Plik `stepcount_pre_year.csv` zawiera oba porównania GE/GK, punktowe 95% PU i **surowe p**. Ten dodatkowy wynik nie zmienia siedmiu pierwotnych rodzin Holma; kolumna `p_adjustment` jawnie wskazuje brak korekty. Nie wolno interpretować nieistotnego p jako dowodu powrotu do identycznego poziomu początkowego.

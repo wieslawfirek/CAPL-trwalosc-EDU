@@ -40,8 +40,12 @@ Dla wcześniejszej szerokiej bazy projektu dodano lokalny konwerter:
 
 ```bash
 python -m pip install openpyxl
-python -m capl_analysis.convert_wide --input data_private/source.xlsx --age-file data_private/age.xlsx --output data_private/capl_long.csv
+python -m capl_analysis.convert_wide --input data_private/source.xlsx --age-file data_private/age.xlsx --output data_private/capl_long.csv --merge-duplicates
 ```
+
+Aktualizacja z 20 października 2026 obejmuje przygotowanie poprawionej bazy i sześć rycin raportu. Opcja `--merge-duplicates` łączy kopie tego samego pełnego ID tylko przy braku sprzecznych niepustych wyników w analizowanych kolumnach i płci. Domyślnie duplikaty zatrzymują konwersję; także po włączeniu opcji każda sprzeczność wymaga lokalnego wyjaśnienia. Kod −999 jest brakiem przed łączeniem. Nie dopasowujemy osób na podstawie wyników ani kodów tymczasowych. Niepuste `Grupa_2026` muszą być zgodne z grupą zapisaną w pełnym ID.
+
+Obok wyniku konwersji powstaje `capl_long.conversion_audit.json`: liczby wierszy źródła, pominiętych niepełnych ID, połączonych powtórzeń i unikalnych uczniów oraz hash źródła. Nie zawiera listy ID. Uczniów bez wyniku nie usuwa się z rejestru; liczebność każdej analizy zależy od dostępnych wyników. AR z brakującą domeną jest wyłączany z danego terminu i liczony w audycie pipeline.
 
 Konwerter wymaga pierwszej kolumny ze stałym ID w formacie źródłowym oraz kolumn `AR_1`–`AR_3`, `PC_1`–`PC_3` itd. Starsze nazwy `PLANK_time_1` i `PLANK_time_2` są obsługiwane. `Gender=1` oznacza chłopca, `Gender=2` dziewczynkę. Plik wieku powinien zawierać dwie pierwsze kolumny: ID i wiek **z pomiaru po roku**. Nie ma mechanicznego odejmowania wieku dla pre/post. Należy użyć bazy z wcześniej zweryfikowaną płcią.
 
@@ -66,6 +70,7 @@ W folderze wskazanym przez `--output`, m.in.:
 |---|---|
 | `group_sex.csv`, `center_sex.csv` | Liczebności w kolejnych terminach |
 | `outcome_counts.csv`, `descriptive.csv` | Kompletność i statystyki opisowe |
+| `stepcount_pre_year.csv` | Dodatkowe porównanie kroków rok minus pre dla GE i GK; nieskorygowane p, analiza eksploracyjna |
 | `longitudinal_contrasts.csv` | Zmiany i różnice zmian GE–GK; p oraz p Holma |
 | `longitudinal_models.json` | Kowariancje, średnie modelowe, diagnostyka i opcjonalne analizy wrażliwości |
 | `GN_comparisons.csv` | GE–GN i GK–GN po roku |
@@ -73,7 +78,8 @@ W folderze wskazanym przez `--output`, m.in.:
 | `within.csv`, `icc.csv` | Analizy uzupełniające |
 | `supplemental.json` | Również szersze PU i bootstrap szkół |
 | `run_manifest.json` | Wersje bibliotek, ustawienia, hash wejścia i audyt |
-| `*.png` | Ryciny i wykresy diagnostyczne |
+| `fig1.png`–`fig6.png` | Sześć rycin zgodnych z zakresem aktualnego raportu |
+| `diagnostics_qq.png` | Wykresy Q–Q reszt dziewięciu modeli |
 
 Tabele nie zawierają rekordów pojedynczych uczniów. Wyniki wykonane na rzeczywistej bazie pozostają lokalne. Krótkie komunikaty diagnostyczne nie oznaczają, że wszystkie założenia są spełnione. Przerwanie obliczeń nie powinno być omijane przez usuwanie kontroli błędów.
 
@@ -88,3 +94,15 @@ Testy sprawdzają m.in. korektę Holma, zgodność regresji rang z korelacją Sp
 ## Zakres
 
 To kod **analizy gotowych wyników** CAPL, nie oficjalny kalkulator punktacji CAPL-2 z odpowiedzi na pojedyncze pytania i surowych prób. Nie przypisuje kategorii interpretacyjnych dla wieku/płci. Nie wykonuje testu równoważności ani nie mniejszej skuteczności. Nie dowodzi przyczynowego wpływu WF, nauczyciela lub klasy.
+
+## Ryciny raportu
+
+`fig1.png` i `fig2.png`: średnie **modelowe MMRM** z punktowymi 95% PU w GE/GK, osobno opisowa średnia GN z PU CR2 dla klas. Nie należy ich utożsamiać z surowymi średnimi tabel opisowych. `fig3.png` i `fig4.png`: sześć korelacji Spearmana, osobno matematyka i polski, z PU i liczebnościami; kolor zależy od wspólnej korekty Holma dla 12 testów. `fig5.png`: korelacje Pearsona wewnątrz klas, dwa panele. `fig6.png`: ICC wraz z PU, liczbą uczniów i klas.
+
+Czcionka Times New Roman jest używana, jeśli znajduje się na komputerze. Można wskazać katalog legalnie posiadanych plików TTF:
+
+```bash
+python -m capl_analysis.pipeline --input data_private/capl_long.csv --output outputs/study --sensitivity --font-dir /sciezka/do/fontow
+```
+
+Czcionki nie są rozpowszechniane ani pobierane przez kod. Gdy Times New Roman nie ma, używany jest DejaVu Serif z komunikatem ostrzegawczym; faktyczna czcionka trafia do `run_manifest.json`. Zmiana czcionki nie zmienia obliczeń. Po eksporcie do Worda należy zachować proporcje rycin i sprawdzić czytelność.

@@ -164,6 +164,8 @@ def fit(data, v, complete=False):
             c = sum(weight * design(group,t,school,schools) for school,weight in weights.items())
             means[group].append(inference(c,beta,cov,B,X,cache))
     result['means'] = means
+    if v == 'StepCount':
+        result['exploratory_contrasts'] = {'GK_pre_year': inference(contrast([('GK',3,1),('GK',1,-1)]), beta, cov, B, X, cache)}
     return (result, residual)
 
 def holm(ps):

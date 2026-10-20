@@ -13,3 +13,10 @@ Poza ograniczoną ilustracją 10 wierszy samych wyników CAPL/CAMSA w repozytori
 Przed cytowaniem kodu w raporcie użyj stałego odnośnika do konkretnego commita albo oznaczonej wersji. Jeśli repozytorium pozostaje prywatne, czytelnik raportu nie zobaczy jego zawartości bez uprawnień.
 
 CSV jest odczytywany z `float_precision="round_trip"`. To zachowuje zapisane liczby zmiennoprzecinkowe: nawet różnica rzędu 10⁻¹⁵ może zmienić remisy w korelacji rangowej. Nie zaokrąglaj punktacji domen przed analizą.
+
+
+## Aktualizacja 20 października 2026
+
+Do przeliczenia poprawionego szerokiego arkusza użyj konwertera z `--merge-duplicates`, jeśli wcześniej potwierdzono zgodność kopii ID. Zachowaj również audyt konwersji obok kanonicznego CSV. Audyt pipeline jest drugim etapem kontroli: obejmuje m.in. AR z niepełnymi domenami i dostępne liczebności. Nie publikuj źródłowego arkusza, wejściowego CSV ani prywatnych modeli.
+
+Dodano odtwarzalne porównanie kroków GK pre→rok oraz ryciny 1–6 z przedziałami ufności. W GE/GK wykresy przebiegu wykorzystują średnie modelowe; GN jest osobnym opisem z CR2. PNG można wstawić do Worda, ale repozytorium nie generuje automatycznie podświetleń zmian w dokumencie ani jego składu stron. Dane syntetyczne pozostają przykładem działania, a wcześniejsza próbka rzeczywistych 10 wyników nie została rozszerzona.
