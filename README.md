@@ -106,3 +106,7 @@ python -m capl_analysis.pipeline --input data_private/capl_long.csv --output out
 ```
 
 Czcionki nie są rozpowszechniane ani pobierane przez kod. Gdy Times New Roman nie ma, używany jest DejaVu Serif z komunikatem ostrzegawczym; faktyczna czcionka trafia do `run_manifest.json`. Zmiana czcionki nie zmienia obliczeń. Po eksporcie do Worda należy zachować proporcje rycin i sprawdzić czytelność.
+
+## Kontrola danych i założeń
+
+Zbiorcze wyniki kontroli danych, diagnostyka modeli i analizy wrażliwości dla przeliczenia z 20 października 2026 r. są dostępne w dokumencie [Kontrola danych i założeń analiz](docs/data_quality.md). Obejmuje on również decyzje o powtórzonych ID, brakach danych i liczebnościach. Dokument nie zawiera identyfikatorów ani rekordów uczniów.

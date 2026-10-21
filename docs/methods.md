@@ -45,3 +45,7 @@ Brak istotnej różnicy nie dowodzi równości ani pełnej trwałości. Kod nie 
 W konwerterze pełne ID ma postać `O[1-5][A-Z]_cyfra-litera_GE/GK/GN_trzy-cyfry`. Niepełne i tymczasowe kody są pomijane i liczone osobno od pustych ID. Przed modelowaniem trzeba sprawdzić audyt; pominięcie kodu nie oznacza, że osoba nie miała żadnych wyników. Połączenie kopii ID wymaga jawnej opcji `--merge-duplicates`. Łączenie uzupełnia tylko brakujące wartości; sprzeczne wyniki lub płeć zatrzymują procedurę. Nie uśredniamy sprzecznych wpisów i nie tworzymy połączeń z podobnych wyników. Dla kontroli duplikatów brane są pod uwagę wyłącznie zmienne analizowane, wyniki EDU i płeć; pozostałe narzędzia w źródłowym arkuszu nie należą do zakresu konwersji.
 
 Eksploracyjne porównanie liczby kroków po roku z pretestem w GK pochodzi z tego samego modelu MMRM i tej samej macierzy CR2 co pozostałe kontrasty. Jest przechowywane w `exploratory_contrasts.GK_pre_year`. Plik `stepcount_pre_year.csv` zawiera oba porównania GE/GK, punktowe 95% PU i **surowe p**. Ten dodatkowy wynik nie zmienia siedmiu pierwotnych rodzin Holma; kolumna `p_adjustment` jawnie wskazuje brak korekty. Nie wolno interpretować nieistotnego p jako dowodu powrotu do identycznego poziomu początkowego.
+
+## Wyniki kontroli dla aktualnego raportu
+
+Zbiorcze liczebności audytu, wyniki testów diagnostycznych oraz analizy wrażliwości przeliczenia z 20 października 2026 r. przedstawiono w [Kontroli danych i założeń analiz](data_quality.md). To uzupełnienie metodologiczne do raportu, bez udostępniania bazy jednostkowej.
