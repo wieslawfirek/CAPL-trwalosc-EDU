@@ -1,6 +1,22 @@
-# CAPL — trwałość efektów i osiągnięcia szkolne
+# CAPL — trwałość efektów, kategorie interpretacyjne, osiągnięcia szkolne i Stroop
 
-Kod analiz trzech pomiarów CAPL (pretest, posttest, pomiar po roku) w grupie eksperymentalnej GE i kontrolnej GK oraz porównań z nową kohortą GN. Analiza związku CAPL i CAMSA z matematyką oraz językiem polskim dotyczy pomiaru po roku.
+Kod analiz trzech pomiarów CAPL (pretest, posttest, pomiar po roku) w grupie eksperymentalnej GE i kontrolnej GK oraz porównań z nową kohortą GN. Analizy pomiaru po roku obejmują związki CAPL i CAMSA z matematyką oraz językiem polskim, a także związki AR, CAMSA i beep testu z wynikami testu Stroopa. Osobna analiza śledzi przejścia tych samych dzieci między kategoriami CAPL-2/PAPL od posttestu do pomiaru po roku.
+
+## Analizy testu Stroopa
+
+Moduł [`src/capl_analysis/stroop.py`](src/capl_analysis/stroop.py) analizuje dziewięć par: AR, CAMSA i beep test (PACER) × KZ, KN i KN − KZ. KZ i KN oznaczają czas wykonania warunku zgodnego lub niezgodnego podzielony przez liczbę poprawnych odpowiedzi; KN − KZ jest różnicą tych wskaźników.
+
+- Korelacje Spearmana: wariant zakładający niezależność uczniów oraz wariant z korektą CR2 i stopniami swobody Satterthwaite’a dla klas; korekta Holma obejmuje dziewięć testów osobno w każdym wariancie.
+- Korelacje Pearsona po odjęciu średnich klasowych: bootstrap 20 000 całych klas, warstwowany GE/GK i GN; nominalne przedziały 95% oraz przedziały 99,44% z korektą Bonferroniego dla dziewięciu porównań.
+- Bootstrap Spearmana: 5000 losowań osób w wariancie niezależnym; w wariancie klasowym 3000 losowań dla AR i 5000 dla CAMSA oraz PACER.
+
+Uruchomienie po lokalnej konwersji danych:
+
+```bash
+python -m capl_analysis.stroop --input data_private/capl_long.csv --output outputs/stroop
+```
+
+Wyniki zapisują się w `stroop.json`, `stroop_spearman.csv` i `stroop_within.csv`. Instrukcję konwersji i wymagane kolumny podano w sekcji [Uzupełnienia raportu](#uzupełnienia-raportu-z-1-listopada-2026). Podstawowy przykład syntetyczny nie zawiera wskaźników Stroopa; samo uruchomienie `pipeline` nie wykonuje tych analiz.
 
 **Repozytorium nie zawiera pełnej bazy uczniów.**
 
@@ -58,6 +74,8 @@ Konwerter wymaga pierwszej kolumny ze stałym ID w formacie źródłowym oraz ko
 - porównuje GE i GK z GN po roku, uwzględniając ośrodek i CR2 dla klas;
 - oblicza 12 korelacji Spearmana z EDU wraz z klasową korektą wnioskowania i wspólną korektą Holma;
 - oblicza korelacje Pearsona po odjęciu średnich klasowych oraz ICC;
+- osobnym modułem `stroop` oblicza związki AR, CAMSA i PACER z KZ, KN oraz KN − KZ: Spearman bez i z korektą klasową oraz Pearson wewnątrz klas;
+- osobnym modułem `tracking` zestawia roczne przejścia między kategoriami CAPL-2/PAPL;
 - zapisuje przedziały ufności, diagnostykę, ryciny i metadane uruchomienia.
 
 Szczegóły: [metody i ograniczenia](docs/methods.md), [odtwarzalność](docs/reproducibility.md).
@@ -80,6 +98,10 @@ W folderze wskazanym przez `--output`, m.in.:
 | `run_manifest.json` | Wersje bibliotek, ustawienia, hash wejścia i audyt |
 | `fig1.png`–`fig6.png` | Sześć rycin zgodnych z zakresem aktualnego raportu |
 | `diagnostics_qq.png` | Wykresy Q–Q reszt dziewięciu modeli |
+| `stroop_spearman.csv` | Osobny moduł Stroopa: dziewięć korelacji w dwóch wariantach, PU, p i p Holma |
+| `stroop_within.csv` | Osobny moduł Stroopa: Pearson wewnątrz klas, PU 95% i 99,44% |
+| `stroop.json` | Pełne zestawienie analiz Stroopa |
+| `tracking.json` | Osobny moduł śledzenia kategorii CAPL-2/PAPL |
 
 Tabele nie zawierają rekordów pojedynczych uczniów. Wyniki wykonane na rzeczywistej bazie pozostają lokalne. Krótkie komunikaty diagnostyczne nie oznaczają, że wszystkie założenia są spełnione. Przerwanie obliczeń nie powinno być omijane przez usuwanie kontroli błędów.
 
