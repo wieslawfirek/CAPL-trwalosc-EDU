@@ -93,7 +93,7 @@ Testy sprawdzają m.in. korektę Holma, zgodność regresji rang z korelacją Sp
 
 ## Zakres
 
-To kod **analizy gotowych wyników** CAPL, nie oficjalny kalkulator punktacji CAPL-2 z odpowiedzi na pojedyncze pytania i surowych prób. Nie przypisuje kategorii interpretacyjnych dla wieku/płci. Nie wykonuje testu równoważności ani nie mniejszej skuteczności. Nie dowodzi przyczynowego wpływu WF, nauczyciela lub klasy.
+To kod **analizy gotowych wyników** CAPL, nie oficjalny kalkulator punktacji CAPL-2 z odpowiedzi na pojedyncze pytania i surowych prób. Główny pipeline nie przypisuje kategorii interpretacyjnych dla wieku/płci; służy do tego osobny moduł tracking opisany poniżej. Nie wykonuje testu równoważności ani nie mniejszej skuteczności. Nie dowodzi przyczynowego wpływu WF, nauczyciela lub klasy.
 
 ## Ryciny raportu
 
@@ -110,3 +110,21 @@ Czcionki nie są rozpowszechniane ani pobierane przez kod. Gdy Times New Roman n
 ## Kontrola danych i założeń
 
 Zbiorcze wyniki kontroli danych, diagnostyka modeli i analizy wrażliwości dla przeliczenia z 20 października 2026 r. są dostępne w dokumencie [Kontrola danych i założeń analiz](docs/data_quality.md). Obejmuje on również decyzje o powtórzonych ID, brakach danych i liczebnościach. Dokument nie zawiera identyfikatorów ani rekordów uczniów.
+
+
+## Uzupełnienia raportu z 1 listopada 2026
+
+Dodano analizy kategorii CAPL-2/PAPL i Stroopa, opisane w [metodach](docs/methods.md#uzupełnienie-raportu-z-1-listopada-2026). Główny pipeline MMRM/EDU zachowuje dotychczasowe definicje. Poniższe moduły zapisują lokalne tabele, nie publikują bazy uczniów:
+
+```bash
+python -m pip install openpyxl
+python -m capl_analysis.tracking --input data_private/source.xlsx --age-file data_private/age.xlsx --output outputs/tracking
+python -m capl_analysis.convert_wide --input data_private/source.xlsx --age-file data_private/age.xlsx --output data_private/capl_long.csv --merge-duplicates
+python -m capl_analysis.stroop --input data_private/capl_long.csv --output outputs/stroop
+```
+
+Tracking wymaga arkusza `Arkusz1` w zweryfikowanym układzie źródła i pliku wieku z ID oraz wiekiem III pomiaru w pierwszych dwóch kolumnach. Nie stosuje filtra pełnego ID z konwertera MMRM: wszystkie niepuste ID muszą być unikalne. Zapisuje `tracking.json` z liczebnościami, procentami, macierzami i testami GE/GK; nie zawiera rekordów dzieci.
+
+Stroop wymaga dodatkowo kolumn `KZ` i `KN` (czas/poprawne odpowiedzi) przy time=3, opcjonalnie kompletnego `AR_stroop`. Konwerter uzupełnia je, gdy źródło ma czasy, poprawne odpowiedzi oraz `AR_pelny_2026`. Wyniki: `stroop.json`, `stroop_spearman.csv`, `stroop_within.csv`. Opcja `--quick` służy tylko sprawdzeniu działania i nie odtwarza przedziałów raportu. Pełna konfiguracja: 3000/5000 losowań klas dla Spearmana, 5000 losowań osób, 20 000 losowań klas dla Pearsona.
+
+Numeracja fig1–fig6 wcześniejszego pipeline nie jest numeracją rycin w rozszerzonym dokumencie Word. Moduły rozszerzeń zwracają tabele i nie nadpisują dawnych rycin.

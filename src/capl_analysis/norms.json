@@ -1,0 +1,1982 @@
+[
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      47.3,
+      65.3,
+      72.7
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      49.6,
+      64.8,
+      71.7
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      48.8,
+      67.4,
+      75.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      50.6,
+      66.1,
+      73.1
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      49.8,
+      68.7,
+      76.4
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      51.2,
+      66.8,
+      73.9
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      50.2,
+      69.3,
+      77.1
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      51.3,
+      67.0,
+      74.1
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      51.6,
+      71.1,
+      79.1
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      52.1,
+      68.1,
+      75.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      48.1,
+      64.3,
+      71.1
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      44.2,
+      60.4,
+      69.9
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      47.8,
+      66.9,
+      76.4
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      47.0,
+      63.7,
+      71.4
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      50.4,
+      70.3,
+      79.1
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      48.9,
+      68.0,
+      76.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      52.2,
+      68.9,
+      77.2
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      52.7,
+      69.3,
+      76.1
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      54.7,
+      72.6,
+      83.2
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wynik ogólny AR",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      52.3,
+      69.7,
+      79.8
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      13.4,
+      19.4,
+      22.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      13.2,
+      18.0,
+      20.3
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      13.7,
+      19.9,
+      22.5
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      13.7,
+      18.6,
+      20.9
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      14.0,
+      20.3,
+      23.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      14.1,
+      19.1,
+      21.6
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      14.3,
+      20.8,
+      23.6
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      14.5,
+      19.8,
+      22.3
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      14.9,
+      21.6,
+      24.5
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      15.2,
+      20.7,
+      23.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      10.0,
+      17.0,
+      20.4
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      8.1,
+      15.5,
+      19.8
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      10.1,
+      17.9,
+      23.4
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      9.8,
+      16.9,
+      20.5
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      11.9,
+      20.9,
+      25.4
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      10.8,
+      19.4,
+      22.7
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      12.7,
+      21.2,
+      24.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      14.1,
+      20.6,
+      23.2
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      13.9,
+      23.6,
+      27.7
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kompetencje fizyczne",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      14.6,
+      21.6,
+      24.2
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      8.8,
+      22.3,
+      26.9
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      10.8,
+      21.6,
+      26.2
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      8.8,
+      22.3,
+      26.9
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      10.7,
+      21.5,
+      26.1
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      8.8,
+      22.3,
+      26.9
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      10.5,
+      21.1,
+      25.7
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      8.8,
+      22.3,
+      26.9
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      10.1,
+      20.4,
+      24.8
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      8.8,
+      22.3,
+      26.9
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      10.1,
+      20.3,
+      24.7
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      7.3,
+      16.7,
+      22.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      5.0,
+      13.0,
+      18.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      5.7,
+      17.0,
+      24.5
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      5.3,
+      15.0,
+      20.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      5.4,
+      17.9,
+      23.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      7.0,
+      15.0,
+      20.6
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      5.0,
+      17.0,
+      23.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      6.1,
+      15.4,
+      21.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      5.0,
+      17.0,
+      25.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Zachowania codzienne",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      6.0,
+      15.0,
+      20.7
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      16.3,
+      23.0,
+      25.3
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      16.2,
+      22.3,
+      24.8
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      16.7,
+      23.3,
+      25.7
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      16.2,
+      22.3,
+      24.8
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      16.8,
+      23.5,
+      26.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      16.2,
+      22.3,
+      24.8
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      16.8,
+      23.7,
+      26.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      16.2,
+      22.5,
+      25.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      16.8,
+      23.7,
+      26.2
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      16.3,
+      22.5,
+      25.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      23.3,
+      27.8,
+      29.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      19.5,
+      27.5,
+      29.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      20.9,
+      28.1,
+      29.5
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      21.7,
+      27.9,
+      29.9
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      22.2,
+      27.5,
+      29.5
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      21.4,
+      27.7,
+      29.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      21.5,
+      27.6,
+      29.5
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      20.8,
+      27.7,
+      29.5
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      20.9,
+      27.1,
+      29.5
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Motywacja i pewność siebie",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      19.9,
+      27.5,
+      29.3
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      4.4,
+      6.4,
+      7.2
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      4.8,
+      6.6,
+      7.3
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      4.7,
+      6.8,
+      7.6
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      5.0,
+      6.9,
+      7.7
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      5.0,
+      7.2,
+      8.1
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      5.3,
+      7.3,
+      8.1
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      5.2,
+      7.5,
+      8.4
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      5.5,
+      7.6,
+      8.4
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      5.3,
+      7.6,
+      8.5
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      5.6,
+      7.8,
+      8.6
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      2.0,
+      5.0,
+      6.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      2.8,
+      6.0,
+      7.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      2.0,
+      6.0,
+      8.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      3.0,
+      6.0,
+      7.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      3.0,
+      7.0,
+      8.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      4.0,
+      7.0,
+      8.8
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      4.0,
+      7.0,
+      9.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      5.0,
+      7.1,
+      9.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      4.8,
+      8.0,
+      9.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Wiedza i zrozumienie",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      5.0,
+      8.0,
+      9.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      16.0,
+      21.0,
+      23.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      15.0,
+      20.0,
+      21.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      17.0,
+      22.0,
+      23.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      16.0,
+      21.0,
+      22.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      17.0,
+      22.0,
+      24.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      17.0,
+      22.0,
+      23.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      18.0,
+      23.0,
+      25.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      17.0,
+      22.0,
+      24.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      18.0,
+      24.0,
+      26.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      18.0,
+      23.0,
+      25.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      11.0,
+      18.0,
+      21.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      10.0,
+      17.0,
+      20.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      12.0,
+      20.0,
+      22.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      12.0,
+      19.0,
+      22.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      13.0,
+      21.0,
+      23.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      12.0,
+      20.0,
+      22.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      13.0,
+      23.0,
+      24.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      14.0,
+      22.0,
+      24.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      17.0,
+      23.0,
+      25.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "CAMSA (0–28 pkt)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      17.0,
+      22.0,
+      24.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      10.0,
+      25.0,
+      37.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      9.0,
+      19.0,
+      27.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      10.0,
+      27.0,
+      39.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      10.0,
+      21.0,
+      29.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      11.0,
+      28.0,
+      41.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      10.0,
+      21.0,
+      30.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      11.0,
+      30.0,
+      43.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      11.0,
+      23.0,
+      32.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      13.0,
+      33.0,
+      48.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      12.0,
+      26.0,
+      36.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      10.0,
+      28.0,
+      36.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      10.0,
+      21.0,
+      32.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      10.0,
+      28.0,
+      41.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      11.0,
+      23.0,
+      32.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      12.0,
+      30.0,
+      49.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      12.0,
+      26.0,
+      35.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      14.0,
+      31.0,
+      51.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      17.0,
+      32.0,
+      41.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      17.0,
+      41.0,
+      55.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "PACER (odcinki 20 m)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      17.0,
+      29.0,
+      40.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      12.4,
+      72.0,
+      101.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      24.4,
+      59.4,
+      89.3
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      15.2,
+      74.9,
+      103.8
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      25.2,
+      61.4,
+      92.2
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      18.1,
+      77.7,
+      106.7
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      26.0,
+      63.4,
+      95.2
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      20.9,
+      80.6,
+      109.5
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      26.8,
+      65.3,
+      98.2
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      23.8,
+      83.4,
+      112.4
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      27.6,
+      67.3,
+      101.2
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      28.1,
+      68.9,
+      131.3
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      28.4,
+      65.1,
+      115.6
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      28.4,
+      75.0,
+      123.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      30.4,
+      74.0,
+      134.7
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      37.7,
+      89.0,
+      178.1
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      38.7,
+      89.3,
+      168.2
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      41.0,
+      91.9,
+      144.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      47.5,
+      91.4,
+      153.7
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      49.8,
+      112.7,
+      180.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Deska (sekundy)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      48.9,
+      100.5,
+      158.8
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      8892.0,
+      11999.0,
+      17980.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      8059.0,
+      11999.0,
+      15643.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      8655.0,
+      11999.0,
+      17500.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      7814.0,
+      11999.0,
+      15168.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      8417.0,
+      11999.0,
+      17020.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      7569.0,
+      11999.0,
+      14692.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      8180.0,
+      11999.0,
+      16539.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      7324.0,
+      11999.0,
+      14217.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      7942.0,
+      11999.0,
+      16059.0
+    ]
+  },
+  {
+    "norm": "CAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      7079.0,
+      11999.0,
+      13742.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 8,
+    "thresholds": [
+      6783.0,
+      11999.0,
+      13037.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 8,
+    "thresholds": [
+      6570.0,
+      11999.0,
+      12985.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 9,
+    "thresholds": [
+      7346.0,
+      11999.0,
+      14647.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 9,
+    "thresholds": [
+      6715.0,
+      11999.0,
+      12985.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 10,
+    "thresholds": [
+      6831.0,
+      11999.0,
+      14985.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 10,
+    "thresholds": [
+      6858.0,
+      11999.0,
+      13337.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 11,
+    "thresholds": [
+      7262.0,
+      11999.0,
+      14458.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 11,
+    "thresholds": [
+      7011.0,
+      11999.0,
+      13386.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Chłopiec",
+    "age": 12,
+    "thresholds": [
+      6567.0,
+      11999.0,
+      15296.0
+    ]
+  },
+  {
+    "norm": "PAPL",
+    "metric": "Kroki (średnia dzienna)",
+    "sex": "Dziewczynka",
+    "age": 12,
+    "thresholds": [
+      6535.0,
+      11999.0,
+      13099.0
+    ]
+  }
+]

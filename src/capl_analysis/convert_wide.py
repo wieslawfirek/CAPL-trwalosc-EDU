@@ -20,11 +20,14 @@ def convert(source,ages=None,merge_duplicates=False):
     audit={'source_rows':len(valid),'valid_id_rows':int(valid.sum()),'excluded_rows':excluded,
            'missing_id_rows':missing_ids,'nonstandard_id_rows':excluded-missing_ids,'duplicate_rows_collapsed':0}
     # Only fields actually used in the analysis may be reconciled. No approximate matching.
+    optional_stroop=['Stroop_KZ_CZAS_S','Stroop_KZ_LICZBA_POPRAWNYCH','Stroop_KN_CZAS_S','Stroop_KN_LICZBA_POPRAWNYCH']
+    if any(c in source for c in optional_stroop) and not all(c in source for c in optional_stroop):raise ValueError('Incomplete optional Stroop columns')
     required=[f'PLANK_time_{t}' if v=='Plank_time' and t<3 else f'{v}_{t}'
               for v in VARIABLES for t in (1,2,3)]+TESTS
     missing=set(required)-set(source)
     if missing:raise ValueError('Missing source columns: '+', '.join(sorted(missing)))
-    source[required]=source[required].replace(-999,np.nan)
+    extra=optional_stroop if all(c in source for c in optional_stroop) else []
+    source[required+extra]=source[required+extra].replace(-999,np.nan)
     if 'Grupa_2026' in source:
         expected=source.id.str.split('_').str[2]
         if (source.Grupa_2026.notna() & source.Grupa_2026.ne(expected)).any():
@@ -32,7 +35,7 @@ def convert(source,ages=None,merge_duplicates=False):
     duplicate_count=int(source.id.duplicated().sum())
     if duplicate_count:
         if not merge_duplicates:raise ValueError('Duplicate stable IDs; review and use --merge-duplicates only for compatible records')
-        checked=required+(['Gender'] if 'Gender' in source else [])
+        checked=required+extra+(['Gender'] if 'Gender' in source else [])
         conflicts=source.groupby('id',sort=False)[checked].nunique(dropna=True).gt(1)
         if conflicts.any().any():
             fields=conflicts.columns[conflicts.any()].tolist()
@@ -56,6 +59,11 @@ def convert(source,ages=None,merge_duplicates=False):
             for test in TESTS:
                 if test not in source:raise ValueError('Missing source column '+test)
                 a[test]=z[test] if t==3 else np.nan
+            if extra:
+                a['AR_stroop']=z.get('AR_pelny_2026',np.nan) if t==3 else np.nan
+                for condition in ['KZ','KN']:
+                    duration=z['Stroop_'+condition+'_CZAS_S'];correct=z['Stroop_'+condition+'_LICZBA_POPRAWNYCH']
+                    a[condition]=duration/correct if t==3 and pd.notna(duration) and pd.notna(correct) and duration>=0 and correct>0 else np.nan
             rows.append(a)
     result=pd.DataFrame(rows);result.attrs['conversion_audit']=audit
     return result,excluded
@@ -67,3 +75,4 @@ def main():
     a.output.with_suffix('.conversion_audit.json').write_text(json.dumps(audit,indent=2),encoding='utf-8')
     print(f'Converted {d.id.nunique()} unique students; excluded {n} rows without a valid stable ID. Saved locally: {a.output}')
 if __name__=='__main__':main()
+

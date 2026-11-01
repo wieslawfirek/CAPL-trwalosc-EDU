@@ -27,3 +27,8 @@ CSV UTF-8, separator przecinek, separator dziesiętny kropka. Jeden wiersz na pa
 Nie obliczamy wyniku EDU z procentów. Jeśli w innym badaniu skala EDU jest inna, trzeba jawnie zmienić walidację, opisać skalę i ponownie zweryfikować kod.
 
 Kod nie wymaga prawdziwych identyfikatorów z projektu. Po lokalnym pseudonimizowaniu należy zachować tę samą mapę uczniów i klas we wszystkich terminach. Konwerter historycznego XLSX rozpoznaje natomiast konkretny format ID i wymaga wcześniejszego uporządkowania bazy. Nie przesyłaj ani mapy ID, ani wynikowej bazy do repozytorium.
+
+
+## Opcjonalne dane Stroopa
+
+Przy time=3: `KZ`, `KN` to czas warunku zgodnego/niezgodnego podzielony przez liczbę poprawnych odpowiedzi. `KN_minus_KZ` jest wyznaczane w module analizy, bez obcinania wartości ujemnych. `AR_stroop` zawiera zweryfikowany kompletny AR, ze źródłowej kolumny `AR_pelny_2026`. Brak mianownika lub zero poprawnych odpowiedzi oznacza brak wskaźnika; nie uzupełnia się braków. Dane pozostają w data_private, poza repozytorium.

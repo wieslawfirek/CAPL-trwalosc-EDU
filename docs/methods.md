@@ -49,3 +49,26 @@ Eksploracyjne porównanie liczby kroków po roku z pretestem w GK pochodzi z teg
 ## Wyniki kontroli dla aktualnego raportu
 
 Zbiorcze liczebności audytu, wyniki testów diagnostycznych oraz analizy wrażliwości przeliczenia z 20 października 2026 r. przedstawiono w [Kontroli danych i założeń analiz](data_quality.md). To uzupełnienie metodologiczne do raportu, bez udostępniania bazy jednostkowej.
+
+
+## Uzupełnienie raportu z 1 listopada 2026
+
+### Roczne przejścia CAPL-2 i PAPL
+
+Moduł `tracking` analizuje posttest i III pomiar tych samych dzieci, oddzielnie dla dziewięciu wskaźników. Wiek III pochodzi z osobnego pliku, wiek post = wiek III minus dokładnie rok (założenie analityczne, nie obliczenie z dat urodzenia). Brak wieku lub płci uniemożliwia klasyfikację. Progi dla wieku 8–12 i płci znajdują się w `src/capl_analysis/norms.json`: CAPL z `get_capl_interpretation` (https://github.com/cran/capl/blob/master/R/capl.R), PAPL z https://github.com/wieslawfirek/kalkulatorCAPL-PAPL (data/papl_norms.csv, app.R). Kategorie: 1 gdy x < próg1; 2 gdy próg1 ≤ x ≤ próg2; 3 gdy próg2 < x ≤ próg3; 4 gdy x > próg3. PAPL: zaokrąglenie do całkowitych dla CAMSA/PACER/kroków, do jednego miejsca dla pozostałych; CAPL: bez zaokrąglania poza średnią kroków.
+
+Wynik ogólny to suma kompletnych domen; kontrolowana jest kompletność komponentów, nie punktuje się ponownie odpowiedzi. CAMSA ma skalę 0–28, PACER oznacza odcinki 20 m, deska sekundy, kroki średnią dzienną. Nie klasyfikuje się osobno MVPA, ponieważ źródło zawiera punkty 0–5, a nie dni 0–7. Wymagany jest zweryfikowany układ arkusza; brakujące lub niezgodne nagłówki zatrzymują analizę. Wyniki poza zakresem walidacji są pomijane.
+
+Zestawienia obejmują kierunek zmiany, przejścia o co najmniej dwie kategorie, macierze 4×4, rozkłady w obu pomiarach oraz cztery rozłączne sytuacje względem progu kategorii 3: poniżej w obu, osiągnięcie, utrzymanie, utrata. Każdy procent odnosi się do wszystkich par danego wskaźnika. Pearson χ² porównuje GE/GK w tabeli 2×3 (spadek, bez zmiany, awans) dla wyniku ogólnego; Holm obejmuje dwa testy CAPL/PAPL. Ten test jest eksploracyjny, bez korekty zagnieżdżenia i bez uwzględnienia kategorii wyjściowej.
+
+Próba śledzenia kategorii powstaje z niepustych unikalnych ID źródła, natomiast główny konwerter MMRM akceptuje tylko pełne ID zgodne z opisanym wzorcem. Nie wolno utożsamiać ich rejestrów: wcześniejszy audyt 594 uczniów nie dotyczy całej bazy użytej do śledzenia kategorii (661 niepustych ID). Liczba kompletnych par wyniku ogólnego wynosi 227. Moduł zapisuje jedynie zagregowane zestawienia lokalnie.
+
+### Stroop
+
+Konwerter opcjonalnie odczytuje czasy i liczby poprawnych odpowiedzi KZ/KN, licząc czas/poprawne odpowiedzi wyłącznie przy dodatnim mianowniku. W analizie Stroopa AR pochodzi z kolumny `AR_pelny_2026` (przekazanej jako `AR_stroop`), jeżeli jest dostępna. Zachowuje to zweryfikowaną kompletność AR w tym zestawie danych, bez zmiany wcześniejszej polityki głównego pipeline. Użytkownik wejścia CSV bez tej kolumny odpowiada za kompletność AR.
+
+Moduł `stroop` oblicza 3×3 korelacje: AR/CAMSA/PACER × KZ/KN/(KN−KZ). Wariant niezależnych uczniów: standardowe dwustronne p Spearmana i 5000 bootstrapów osób. Wariant klasowy: te same rho, regresja standaryzowanych rang z CR2 i Satterthwaite’em, bootstrap całych klas (3000 dla AR, 5000 dla pozostałych). Holm obejmuje dziewięć testów osobno w każdym wariancie.
+
+Pearson wewnątrz klas wykorzystuje dostępne pary, pomija klasy z jedną osobą i odejmuje odpowiednie średnie klasowe. W odróżnieniu od uzupełniającego modułu EDU nie usuwa rekordów mniejszościowej grupy w klasie. Bootstrap 20 000 całych klas jest warstwowany GE/GK vs GN; przedziały 95% są nominalne, a poziom 1−0,05/9 = 99,444…% odpowiada Bonferroniemu. Liczebności raportuje się dla każdej pary. Ziarna rozszerzenia są jawne w kodzie. Bootstrap może dawać nieco inne granice niż wcześniejsze obliczenia przy innym ziarnie lub kolejności; nie zmienia to odtwarzanych rho, r i p CR2.
+
+Rozszerzenie nie zmienia definicji modeli MMRM ani wcześniejszych korelacji EDU. Kontrola z października w data_quality.md pozostaje historycznym audytem wcześniejszej bazy.

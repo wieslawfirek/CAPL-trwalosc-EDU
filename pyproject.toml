@@ -14,3 +14,7 @@ capl-analysis = "capl_analysis.pipeline:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+
+[tool.setuptools.package-data]
+capl_analysis = ["norms.json"]
